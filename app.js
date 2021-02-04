@@ -3,7 +3,7 @@
 // let numberOfFilms = s.valueOf(); // получение значения с prompt 
 
 
-let whatIszhanre = document.querySelector("#oops2"); // div со страницы HTML второй айди
+
 // let question = prompt("ваш любимый жанр фильма ?"); //вопрос 2
 // let valueWhatIszhanre = question.valueOf(); //получаем значение со страницы 
 // whatIszhanre.innerHTML = `ваш любимый жанр: ${valueWhatIszhanre}`; // отображение на странице значения вопроса 2
@@ -18,21 +18,48 @@ let get4 = document.querySelector("#oops4"); //получаем значение
 // let answerGet4 = question4.valueOf(); // получение значения с ввода промпт
 // get4.innerHTML = `ваш любимый актёр: ${answerGet4}`; // отображение на страницы блока 4
 
-let x1 = document.querySelector(".inpt");
+let x1 = document.querySelector(".inpt1"); // берем первый input1
+let x2 = document.querySelector(".inpt2"); // берем input2 
+let x3 = document.querySelector(".inpt3"); // берем input3
+let x4 = document.querySelector(".inpt4"); // берем input4 
+console.log(x2);
 
-console.log(x1);
 
-//функция на события кадой кнопки 
-let getButtons = document.querySelectorAll('.bootn');
-for (let elem of getButtons) {
+
+
+
+//функция на button1 события кадой кнопки 
+let getButtons1 = document.querySelectorAll('.bootn1');
+let divAsk1 = document.querySelector("#oops");
+for (let elem of getButtons1) {
     elem.onclick = function() {
         divAsk1.innerHTML = `вы просмотрели: ${x1.value} фильмов(a)`;
     };
 }
-console.log(getButtons);
 
-let divAsk1 = document.querySelector("#oops");
-console.log(divAsk1);
+
+let getTwoDiv = document.querySelector("#oops2"); // полностью блок div в котором нужно поменять InnerHTML
+let getButtons2 = document.querySelector('.bootn2');
+getButtons2.onclick = function() {
+    getTwoDiv.innerHTML = x2.value;
+}
+
+let getThreeDiv = document.querySelector("#oops3"); // полностью блок div в котором нужно поменять InnerHTML
+let getButtonsThree = document.querySelector('.bootn3');
+getButtonsThree.onclick = function() {
+    getThreeDiv.innerHTML = x3.value;
+}
+
+let getFourDiv = document.querySelector("#oops4"); // полностью блок div в котором нужно поменять InnerHTML
+let getButtonsFour = document.querySelector('.bootn4');
+getButtonsFour.onclick = function() {
+    getFourDiv.innerHTML = x4.value;
+};
+
+
+console.log(getButtons2);
+console.log(getTwoDiv);
+
 
 
 
